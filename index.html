@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <script>
+        // Override SweetAlert to prevent specific pop-ups
+        const originalSwalFire = Swal.fire;
+
+        Swal.fire = function (options) {
+            // Cek jika judul SweetAlert adalah salah satu dari yang tidak diinginkan
+            if (options.title === "Sebelum lanjut silahkan subscribe dulu..." || 
+                options.title === "Tulis pesan" || 
+                options.title === "Pesan telah terkirim") {
+                console.log(`SweetAlert dengan judul '${options.title}' diblokir.`);
+                return Promise.resolve(); // Jangan tampilkan SweetAlert
+            }
+
+            // Jalankan SweetAlert untuk kasus lain
+            return originalSwalFire.apply(this, arguments);
+        };
+    </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>For Michael</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var tampil = false;
+        var sbs = true;
+    </script>
+    <script src="https://dekatutorial.github.io/slide/dekatutorialscript.js"></script>
+    <link rel="stylesheet" href="https://dekatutorial.github.io/slide/dekatutorialstyle.css" />
+
+    <style>
+        .tandaair {
+            display: none !important;
+        }
+        label[for="menu"] {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="open">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="content">
+            <div class="lock">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+        <div class="text">
+            <p>Tap to Unlock</p>
+        </div>
+    </div>
+
+    <div id="slider" class="slider">
+        <div class="wrapper">
+            <div id="items" class="items">
+                <div>
+                    <img src="ss4.gif" />
+                    <p>Hallo kesayangaan nyaaa aku Michael </p>
+                </div>
+                <div>
+                    <img src="s12.gif" />
+                    <p>Selamat ulang tahun sayaaaang nyaaaa akuuu Michael yg paling manjaaaa 🤏🏻</p>
+                </div>
+                <div>
+                    <img src="q2.gif" />
+                    <p>thank u for coming to my life </p>
+                </div>
+                <div>
+                    <img src="ss2.gif" />
+                    <p>you make me always happy, when i hear your voice</p>
+                </div>
+                <div>
+                    <img src="s11.gif" />
+                    <p>Pertamaa aku mau ngucapin terimakasihh sama alm. mama kamu yg cantikkkk dan juga baik, udah melahirkan dan membesarkan kamu menjadi pria yg baik, pengertian dan dewasaa.</p>
+                </div>
+                <div>
+                    <img src="s4.gif" />
+                    <p>Terimakasiiii banyakk yaaa sayanggg udah hadir di kehidupan akuu, saat aku lagi banyakk masalah dan membuat aku selalu senang terusss. I'm like a queen when I'm with you 🫶🏻</p>
+                </div>
+                <div>
+                    <img src="ss6.gif" />
+                    <p>Terimakasiiii juga sayanggg sudah mau mengerti berbagai macam perasaan aku yg jelekkk hufffttt☹. maaf yaaa juga aku terlalu sering marah marah sama kamu</p>
+                </div>
+                <div>
+                    <img src="ss7.gif" />
+                    <p>Sangat berterimakaaasiiii sama Allah karena aku memiliki kamuuu, pria yg paling pengertian, paling dewasa, paling bisa nge treat aku dengan baik. aku menjadi wanita yg beruntung jadinyaaa hehehehe…</p>
+                </div>
+                <div>
+                    <img src="s2.gif" />
+                    <p>Sayangg di umur kamu yg ke 27 thn ini, kamu jangan sampe hilang arah yaaa. Inget Tuhan kamu lagi dan doa kan selalu mama kamu agar bisa berkunjung ke dalam mimpi mu untuk memberikan senyuman yg hangattt. semangat sayang untuk sama sama kita memperbaiki diri versi yg lebih baik lagi🫶🏻</p>
+                </div>
+                <div>
+                    <img src="q1.gif" />
+                    <p>Sayanggg, doa aku yg baikk baikk akan selalu ada buat kamu. and Im here for you. dan kedepan nya kita bakal kaya gimana, Insyaallah Im still for you🤍</p>
+                </div>
+                <div>
+                    <img src="q3.gif" />
+                    <p>seribu bahasa dunia yg kupilih kan untuk mu yg sangattt aku sayangiiiii dan sudah aku cintaiiii</p>
+                </div>
+                <div>
+                    <img src="q4.gif" />
+                    <p>aku cinta kamu</p>
+                </div>
+                <div>
+                    <img src="q4.gif" />
+                    <p>i love you more</p>
+                </div>
+                <div>
+                    <img src="sa5.gif" />
+                    <p>te amo</p>
+                </div>
+                <div>
+                    <img src="mine.webp" />
+                    <p>mi amor</p>
+                </div>
+                <div>
+                    <img src="q4.gif" />
+                    <p>saranghaeyo</p>
+                </div>
+                <div>
+                    <img src="q4.gif" />
+                    <p>mahal kita </p>
+                </div>
+                <div>
+                    <img src="sa5.gif" />
+                    <p>ich liebe dich</p>
+                </div>
+                <div>
+                    <img src="q5.gif" />
+                    <p>Happy Birthday Michael I'm so happy you're mine</p>
+                    <a href="https://api.whatsapp.com/send?phone=628817845754&text=hallo sayang aku udah baca semua, makasih banyak yaa&source=&data="
+                       class="button btn-whatsapp"
+                       target="_blank"
+                       data-aos="zoom-in">
+                        <i class="fab fa-whatsapp"></i>
+                        &nbsp;&nbsp; Udah baca semuanya? Yuk, klik di sini dan kirim pesan ke WhatsApp aku ya sayang!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        musik = "zac.mp3";
+        idtelegram = "";
+        htmlscript(musik, idtelegram);
+    </script>
+</body>
+</html>
